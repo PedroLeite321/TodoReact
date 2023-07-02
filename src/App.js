@@ -31,10 +31,6 @@ function App() {
       }
     }));
   }
-
-  const updateTask = (args) =>  {
-   
-  }
   
   const completedTask = ( args ) => {
     //map function to create a copy with changes in its objects.
@@ -66,7 +62,7 @@ function App() {
         <button onClick={createTask}>Add Item</button>
       </div>
       <div className="App">
-          {todoList.map((allTasks) => <Task name={allTasks.name} id={allTasks.id} delete={deleteTask} update={updateTask} undo={undo_Complete} complete={completedTask} completed={allTasks.completed}/>)}
+          {todoList.map((allTasks) => <Task name={allTasks.name} id={allTasks.id} delete={deleteTask} undo={undo_Complete} complete={completedTask} completed={allTasks.completed}/>)}
       </div>
     </main>
   );
